@@ -70,6 +70,7 @@ int main()
     if (n > 1 || n == 0) {
         int x = a;
         do {
+
             if (x < 0) {
                 y = 1;
                 i = 1;
@@ -80,21 +81,23 @@ int main()
                         s += pow((x - pow(i, 2) + j), 2); // pow - возведение в степень
                         j++;
                     } while (j < n);
-                    do {
-                        y *= s;
-                        i++;
-                    } while (j >= n);
-                } while (i <= n);
-            } if (x >= 0) {
+                    y *= s;
+                    i++;
+                } while (i < n);
+            } 
+            
+            if (x >= 0) {
                 y = 0;
                 i = 0;
                 do {
                     y += (x - 1) / (i + 1);
                     i++;
-                } while (i < n);
+                } while (i <= n);
             }
+
             else {
-                cout << "Error x";
+                
+                cout << "Error x " << x << endl;
             }
             cout << "X = " << x << " Y = " << y << endl;
             x += h;
