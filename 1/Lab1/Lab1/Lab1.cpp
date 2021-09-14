@@ -8,51 +8,42 @@ using namespace std;
 
 int main()
 {
+    setlocale(LC_ALL, "Russian");
     // Завдання 1
     // Розробити алгоритм та написати програму, в якій здійснюється читання значення певної довжини в дюймах і обчислюється й виводиться значення цієї довжини в міліметрах (1 дюйм = 25,4 мм).
 
     //float inch, mm;
+    //cout << "Введите значение в дюймах, чтобы получить миллиметры ";
     //cin >> inch;
     //mm = inch * 25.4;
-    //inch >= 0 ? cout << mm  : cout << "Введены не правельные данные" ;
+    //inch >= 0 ? cout << "Ваше значение в миллиметрах = " << mm  : cout << "Введены не правельные данные" ;
+
+
+    
+    //Завдання 2
+    //Розробити алгоритм та написати програму, яка зчитує вісім значень і повертає середнє арифметичне.
+
+    //int a, b, c, d, e, f, g, h, result;
+    //cout << "Введите 8 цифр чтобы получить среднее арифметическое ";
+    //cin >> a >> b >> c >> d >> e >> f >> g >> h;
+    //result = (a + b + c + d + e + f + g + h) / 8;
+    //cout << "Среднее арифметическое = " << result;
+
 
     //Завдання 3
     // Розробити алгоритм та написати програму, яка зчитує значення змінної n цілого типу й обчислює n!
 
-    //int num, result;
-    //result = num;
-
-    //string name;
-    //cout << "Enter your name: ";
-    //getline(cin, name); //cin >> name; getline записывает до пробела
-    //if (name.length() != 0)
-    //    cout << "Hello " << name << endl;
-    //else
-    //    cout << "hello" << endl;
-
-    //for (int counter = 0; counter < 10; counter++){
-    //    cout << " " << counter << endl;
-    //}
-
     //int n, result;
+    //cout << "Введите число факториал которого Вы хотите посчитать ";
     //cin >> n;
-    //result = n;
-    //for (int i = n - 1; i > 1; i--) {
-    //    result *= i;
+    //result = 1;
+    //while (n != 1) {
+    //    result *= n;
+    //    n--;
     //}
-    //cout << result;
+    //cout << "Факториал введенного числа " << " = " << result;
 
-    //while (i < 20) {
-    //    cout << " " << i;
-    //    i++;
-    //}
 
-    //do {
-    //    cout << " " << i;
-    //    i++;
-    //} while (i < 0);
-
-    //cout << "Random number = " << 1 + rand() % 80 << endl; //генераци рандомного числа от 0 до 80
 
     //1.3 Індивідуальне завдання
 
@@ -86,7 +77,7 @@ int main()
                 } while (i < n);
             } 
             
-            if (x >= 0) {
+            else if (x >= 0) {
                 y = 0;
                 i = 0;
                 do {
@@ -96,17 +87,16 @@ int main()
             }
 
             else {
-                cout << "Error x " << x << endl;
+                cout << "error x " << x << endl;
             }
 
-            cout << "X = " << x << " Y = " << y << endl;
+            cout << "x = " << x << " y = " << y << endl;
             x += h;
         } while (x <= b);
-        cout << "End";
+        cout << "end";
     }
-    if (n < 0) {
-        cout << "Incorrect n";
+    else if (n < 0) {
+        cout << "incorrect n";
     }
-
 
 }
