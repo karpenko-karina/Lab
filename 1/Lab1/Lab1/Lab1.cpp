@@ -56,47 +56,82 @@ int main()
 
     //    Конкретна функція визначається відповідно до номеру в списку студентів у групах(номер варіанту).
 
-    int a, b, h, n, y, i, j, s;
-    cin >> a >> b >> h >> n;
-    if (n > 1 || n == 0) {
-        int x = a;
-        do {
+    //int a, b, h, n, y, i, j, s;
+    //cin >> a >> b >> h >> n;
+    //if (n > 1 || n == 0) {
+    //    int x = a;
+    //    do {
 
-            if (x < 0) {
-                y = 1;
-                i = 1;
-                s = 0;
-                j = 1;
-                do {
-                    do {
-                        s += pow((x - pow(i, 2) + j), 2); // pow - возведение в степень
-                        j++;
-                    } while (j < n);
-                    y *= s;
-                    i++;
-                } while (i < n);
-            } 
-            
-            else if (x >= 0) {
-                y = 0;
-                i = 0;
-                do {
-                    y += (x - 1) / (i + 1);
-                    i++;
-                } while (i <= n);
+    //        if (x < 0) {
+    //            y = 1;
+    //            i = 1;
+    //            s = 0;
+    //            j = 1;
+    //            do {
+    //                do {
+    //                    s += pow((x - pow(i, 2) + j), 2); // pow - возведение в степень
+    //                    j++;
+    //                } while (j < n);
+    //                y *= s;
+    //                i++;
+    //            } while (i < n);
+    //        } 
+    //        
+    //        else if (x >= 0) {
+    //            y = 0;
+    //            i = 0;
+    //            do {
+    //                y += (x - 1) / (i + 1);
+    //                i++;
+    //            } while (i <= n);
+    //        }
+
+    //        else {
+    //            cout << "error x " << x << endl;
+    //        }
+
+    //        cout << "x = " << x << " y = " << y << endl;
+    //        x += h;
+    //    } while (x <= b);
+    //    cout << "end";
+    //}
+    //else if (n < 0) {
+    //    cout << "incorrect n";
+    //}
+
+    //Лабораторна робота 2
+
+    float a, b, c, x1, x2, d;
+    cin >> a >> b >> c;
+    if (a == 0) {
+        if (b == 0) {
+            cout << "Бесконечное количевство корней";
+        }
+
+        else if (b != 0) {
+            if (c == 0) {
+                cout << "Нет корней";
             }
-
-            else {
-                cout << "error x " << x << endl;
+            else if (c != 0) {
+                x1 = -c / b;
+                cout << x1;
             }
-
-            cout << "x = " << x << " y = " << y << endl;
-            x += h;
-        } while (x <= b);
-        cout << "end";
-    }
-    else if (n < 0) {
-        cout << "incorrect n";
+        }
     }
 
+    else if (a != 0) {
+        d = pow(b, 2) - 4 * a * c;
+        if (d < 0) {
+            cout << "Нет корней";
+        }
+        else if (d > 0) {
+            x1 = (-b + pow(d, 1 / 2) / 2 * a);
+            x2 = (-b - pow(d, 1 / 2) / 2 * a);
+            cout << x1 << " , " << x2;
+        }
+        else if (d == 0) {
+            x1 = -b / 2a;
+            cout << x1;
+        }
+    }
 }
