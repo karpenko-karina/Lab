@@ -74,9 +74,9 @@ int main()
             if (x < 0) {
                 y = 1;
                 i = 1;
+                s = 0;
+                j = 1;
                 do {
-                    s = 0;
-                    j = 1;
                     do {
                         s += pow((x - pow(i, 2) + j), 2); // pow - возведение в степень
                         j++;
@@ -96,9 +96,9 @@ int main()
             }
 
             else {
-                
                 cout << "Error x " << x << endl;
             }
+
             cout << "X = " << x << " Y = " << y << endl;
             x += h;
         } while (x <= b);
@@ -107,4 +107,6 @@ int main()
     if (n < 0) {
         cout << "Incorrect n";
     }
+
+
 }
