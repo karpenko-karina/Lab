@@ -102,38 +102,76 @@ int main()
 
     //Лабораторна робота 2
 
-    double a, b, c, x1, x2, d;
-    cin >> a >> b >> c;
-    if (a == 0) {
-        if (b == 0) {
-            cout << "Бесконечное количевство корней";
-        }
+    //double a, b, c, x1, x2, d;
+    //cin >> a >> b >> c;
+    //if (a == 0) {
+    //    if (b == 0) {
+    //        cout << "Бесконечное количевство корней";
+    //    }
 
-        else if (b != 0) {
-            if (c == 0) {
-                cout << "Нет корней";
-            }
-            else if (c != 0) {
-                x1 = -c / b;
-                cout << x1;
-            }
+    //    else if (b != 0) {
+    //        if (c == 0) {
+    //            cout << "Нет корней";
+    //        }
+    //        else if (c != 0) {
+    //            x1 = -c / b;
+    //            cout << x1;
+    //        }
+    //    }
+    //}
+
+    //else if (a != 0) {
+    //    d = pow(b, 2) - 4 * a * c;
+    //    if (d < 0) {
+    //        cout << "Нет корней";
+    //    }
+    //    else if (d > 0) {
+    //        x1 = ((-b + sqrt(d)) / 2 * a);
+    //        x2 = ((-b - sqrt(d)) / 2 * a);
+    //        cout << x1 << " , " << x2;
+    //    }
+    //    else if (d == 0) {
+    //        x1 = -b / 2 * a;
+    //        cout << x1;
+    //    }
+    //}
+
+
+
+
+    //1.2 Програмна реалізація циклічного алгоритму
+    //Розробити програму, яка реалізує алгоритм обчислення виразу :
+
+    int n, k, x, y, i;
+    cin >> n >> k >> x;
+    if (k > n) {
+        cout << "Error1";
+    }
+    else if (k <= n) {
+        if (n < 0) {
+            cout << "Error2";
+        }
+        else if (n >= 0) {
+            y = 0;
+            i = 1;
+            do {
+                if (i == k) {
+                    i++;
+                }
+                else if (i != k) {
+                    if ((x + 2) != 0) {
+                        y += i / (x + 2);
+                        i++;
+                        cout << y;
+                    }
+                    else if ((x + 2) == 0) {
+                        cout << "Error";
+                    }
+                }
+            } while (i <= n);
         }
     }
 
-    else if (a != 0) {
-        d = pow(b, 2) - 4 * a * c;
-        if (d < 0) {
-            cout << "Нет корней";
-        }
-        else if (d > 0) {
-            x1 = ((-b + sqrt(d)) / 2 * a);
-            x2 = ((-b - sqrt(d)) / 2 * a);
-            cout << x1 << " , " << x2;
-        }
-        else if (d == 0) {
-            x1 = -b / 2 * a;
-            cout << x1;
-        }
-    }
+
 
 }
